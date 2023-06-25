@@ -5,15 +5,19 @@ intents:
   - goodbye
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - stressed
+  - specify_properties
+  - recommend_car
+  - inform
+
+actions:
+  - action_recommend_car
 
 responses:
+  utter_default:
+  - text: "Sorry, I didn't understand. Can you please rephrase or provide more information?"
+
   utter_greet:
   - text: "Hey! How are you?"
-  - text: "Ur mom"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -33,7 +37,7 @@ responses:
 
   utter_recommend_car:
   - text: "Sure! Based on your requirements, I recommend the following cars:"
-    action: action_recommend_car
+  
 
 
 session_config:

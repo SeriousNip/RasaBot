@@ -2,39 +2,18 @@ version: "3.1"
 
 stories:
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
 
-- story: sad path 1
+- story: User asks for a car recommendation
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - intent: recommend_car
+  - action: action_recommend_car
 
-- story: sad path 2
+- story: User specifies car properties and asks for a recommendation
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - intent: specify_properties
+  - action: action_recommend_car
 
-- story: stressed path
+- story: User provides unrecognized input
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: stressed
-  - action: utter_calm_down
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - intent: inform
+  - action: utter_default

@@ -15,28 +15,6 @@ nlu:
     - See you later
     - Take care
 
-- intent: thanks
-  examples: |
-    - Thank you
-    - Thanks a lot
-    - Much appreciated
-    - Thanks for your help
-
-- intent: time
-  examples: |
-    - What time is it?
-    - Can you tell me the current time?
-    - Do you have the time?
-    - What's the time now?
-
-
-- intent: jokes
-  examples: |
-    - Tell me a joke
-    - Give me a funny joke
-    - Do you know any jokes?
-    - I need a good laugh
-
 - intent: recommend_car
   examples: |
     - Can you recommend a car?
@@ -47,23 +25,14 @@ nlu:
 
 - intent: specify_properties
   examples: |
-    - I'm looking for a car with [V8 engine](engine_capacity) and [low fuel consumption](fuel_consumption).
-    - Show me cars with [4 cylinders](number_of_cylinders) and [weight under 2000 kg](car_weight).
-    - Can you find cars with [high engine capacity](engine_capacity) and [origin from Germany](car_origin)?
-
-- intent: thank
-  examples: |
-    - Thank you
-    - Thanks
-    - Great, thanks
-    - Appreciate it
-
-- intent: goodbye
-  examples: |
-    - Goodbye
-    - Bye
-    - See you later
-    - Take care
+    - I'm looking for a car with (engine_capacity) and (fuel_consumption).
+    - Show me cars with (number_of_cylinders) and (car_weight).
+    - Can you find cars with (engine_capacity) and from (car_origin)?
+    - I want a car with an engine capacity of [2.0L](engine_capacity)
+    - Find me a car that has a fuel consumption of [less than 10 km/L](fuel_consumption)
+    - Show cars with [6 cylinders](number_of_cylinders)
+    - Find a car with a weight under [1500 kg](car_weight)
+    - Recommend cars with an origin from [Italy](car_origin)
 
 - intent: affirm
   examples: |
@@ -86,6 +55,12 @@ nlu:
     - [6 cylinders](number_of_cylinders)
     - [weight under 1500 kg](car_weight)
     - [origin from Japan](car_origin)
+    - I'm looking for a car with a [3.5L](engine_capacity) engine
+    - Fuel consumption should be [12 km/L](fuel_consumption)
+    - I want a car with [8 cylinders](number_of_cylinders)
+    - Car weight should be [less than 2000 kg](car_weight)
+    - I prefer cars with an origin from [Japan](car_origin)
+
 
 entities:
 - engine_capacity
@@ -93,17 +68,6 @@ entities:
 - number_of_cylinders
 - car_weight
 - car_origin
-
-responses:
-  utter_greet:
-  - text: "Hello! How can I assist you today?"
-
-  
-  utter_goodbye:
-  - text: "Goodbye! If you have any more questions, feel free to ask."
-
-  utter_default:
-  - text: "Sorry, I didn't understand. Can you please rephrase or provide more information?"
 
 actions:
 - action_recommend_car

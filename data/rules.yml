@@ -27,10 +27,6 @@ rules:
   - intent: specify_properties
   - action: action_recommend_car
 
-- rule: Thank and end conversation
-  steps:
-  - intent: thank
-  - action: utter_goodbye
 
 - rule: End conversation
   steps:
