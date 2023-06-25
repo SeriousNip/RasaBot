@@ -9,6 +9,20 @@ intents:
   - recommend_car
   - inform
 
+slots:
+  car_origin:
+    type: text
+    mappings:
+    - type: from_text
+      entity: car_origin
+
+entities:
+  - engine_capacity
+  - fuel_consumption
+  - number_of_cylinders
+  - car_weight
+  - car_origin
+
 actions:
   - action_recommend_car
 

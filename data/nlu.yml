@@ -17,6 +17,7 @@ nlu:
 
 - intent: recommend_car
   examples: |
+    - I'm looking for a car from [japan](car_origin)
     - Can you recommend a car?
     - I need a car recommendation
     - Which car should I buy?
@@ -25,7 +26,6 @@ nlu:
 
 - intent: specify_properties
   examples: |
-    - I'm looking for a car with (engine_capacity) and (fuel_consumption).
     - Show me cars with (number_of_cylinders) and (car_weight).
     - Can you find cars with (engine_capacity) and from (car_origin)?
     - I want a car with an engine capacity of [2.0L](engine_capacity)
@@ -68,6 +68,9 @@ entities:
 - number_of_cylinders
 - car_weight
 - car_origin
+
+slots:
+  car_origin
 
 actions:
 - action_recommend_car

@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-car_origin",
+      "2": "I-car_origin",
+      "3": "L-car_origin",
+      "4": "U-car_origin",
+      "5": "B-car_weight",
+      "6": "I-car_weight",
+      "7": "L-car_weight",
+      "8": "U-car_weight",
+      "9": "B-engine_capacity",
+      "10": "I-engine_capacity",
+      "11": "L-engine_capacity",
+      "12": "U-engine_capacity",
+      "13": "B-fuel_consumption",
+      "14": "I-fuel_consumption",
+      "15": "L-fuel_consumption",
+      "16": "U-fuel_consumption",
+      "17": "B-number_of_cylinders",
+      "18": "I-number_of_cylinders",
+      "19": "L-number_of_cylinders",
+      "20": "U-number_of_cylinders",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-car_origin": 1,
+      "I-car_origin": 2,
+      "L-car_origin": 3,
+      "U-car_origin": 4,
+      "B-car_weight": 5,
+      "I-car_weight": 6,
+      "L-car_weight": 7,
+      "U-car_weight": 8,
+      "B-engine_capacity": 9,
+      "I-engine_capacity": 10,
+      "L-engine_capacity": 11,
+      "U-engine_capacity": 12,
+      "B-fuel_consumption": 13,
+      "I-fuel_consumption": 14,
+      "L-fuel_consumption": 15,
+      "U-fuel_consumption": 16,
+      "B-number_of_cylinders": 17,
+      "I-number_of_cylinders": 18,
+      "L-number_of_cylinders": 19,
+      "U-number_of_cylinders": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]
