@@ -1,0 +1,109 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - Hi
+    - Hello
+    - Hey there
+    - Good morning
+
+- intent: goodbye
+  examples: |
+    - Bye
+    - Goodbye
+    - See you later
+    - Take care
+
+- intent: thanks
+  examples: |
+    - Thank you
+    - Thanks a lot
+    - Much appreciated
+    - Thanks for your help
+
+- intent: time
+  examples: |
+    - What time is it?
+    - Can you tell me the current time?
+    - Do you have the time?
+    - What's the time now?
+
+
+- intent: jokes
+  examples: |
+    - Tell me a joke
+    - Give me a funny joke
+    - Do you know any jokes?
+    - I need a good laugh
+
+- intent: recommend_car
+  examples: |
+    - Can you recommend a car?
+    - I need a car recommendation
+    - Which car should I buy?
+    - Recommend a car for me
+    - What's a good car to consider?
+
+- intent: specify_properties
+  examples: |
+    - I'm looking for a car with [V8 engine](engine_capacity) and [low fuel consumption](fuel_consumption).
+    - Show me cars with [4 cylinders](number_of_cylinders) and [weight under 2000 kg](car_weight).
+    - Can you find cars with [high engine capacity](engine_capacity) and [origin from Germany](car_origin)?
+
+- intent: thank
+  examples: |
+    - Thank you
+    - Thanks
+    - Great, thanks
+    - Appreciate it
+
+- intent: goodbye
+  examples: |
+    - Goodbye
+    - Bye
+    - See you later
+    - Take care
+
+- intent: affirm
+  examples: |
+    - Yes
+    - Indeed
+    - Of course
+    - That's right
+
+- intent: deny
+  examples: |
+    - No
+    - Not really
+    - I don't think so
+    - Nope
+
+- intent: inform
+  examples: |
+    - [V6 engine](engine_capacity)
+    - [low fuel consumption](fuel_consumption)
+    - [6 cylinders](number_of_cylinders)
+    - [weight under 1500 kg](car_weight)
+    - [origin from Japan](car_origin)
+
+entities:
+- engine_capacity
+- fuel_consumption
+- number_of_cylinders
+- car_weight
+- car_origin
+
+responses:
+  utter_greet:
+  - text: "Hello! How can I assist you today?"
+
+  
+  utter_goodbye:
+  - text: "Goodbye! If you have any more questions, feel free to ask."
+
+  utter_default:
+  - text: "Sorry, I didn't understand. Can you please rephrase or provide more information?"
+
+actions:
+- action_recommend_car

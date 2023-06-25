@@ -1,0 +1,42 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Respond to greetings
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Recommend a car
+  steps:
+  - intent: recommend_car
+  - action: action_recommend_car
+
+- rule: Specify properties and recommend a car
+  steps:
+  - intent: specify_properties
+  - action: action_recommend_car
+
+- rule: Thank and end conversation
+  steps:
+  - intent: thank
+  - action: utter_goodbye
+
+- rule: End conversation
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Default fallback action
+  steps:
+  - action: utter_default
